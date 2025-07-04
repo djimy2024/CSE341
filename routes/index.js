@@ -1,7 +1,7 @@
 //const lesson1controller = require('../controllers/lesson1');
 const route = require('express').Router();
 
-//route.get('/', (req, res) => {res.send('Hello world');});
+route.get('/', (req, res) => {res.send('Hello world');});
 route.use('/users', require('./users'));
 
 //route.get('/', lesson1controller.djessieroute);
