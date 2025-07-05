@@ -3,8 +3,6 @@ const express = require('express');
 const mongodb = require('./data/database');
 const app = express();
 
-//require('./db/connection'); 
-
 const port = process.env.port || 3000;
 
 app.use('/', require('./routes'));
@@ -18,4 +16,3 @@ mongodb.intDb((err) => {
         console.log('web server is listening at port' + port);
     }
 });
-//console.log('web server is listening at port' + port);
