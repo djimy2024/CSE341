@@ -5,10 +5,10 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "https://cse341-2zvx.onrender.com",
+  "host": "cse341-2zvx.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
@@ -20,6 +20,16 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
