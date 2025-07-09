@@ -1,0 +1,32 @@
+## Get all the users
+send request
+Get http://localhost:3000/users
+
+## Get users by id
+send request
+Get http://localhost:3000/users/6867248086637214d1542256
+
+
+send request
+Post http://localhost:3000/users HTTP/1:1
+content-type : application/json
+
+{
+    "firstName": "Ashley",
+    "lastName": "Weaver",
+    "email": "aWeaver@test.com",
+    "favoriteColor": "Brown",
+    "birthday": "06/19/2009"
+}
+
+send request
+Put http://localhost:3000/users/6867248086637214d1542256 HTTP/1:1
+content-type : application/json
+
+{
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "test@gmail.com",
+    "favoriteColor": "Green",
+    "birthday": "12/12/20"
+}
