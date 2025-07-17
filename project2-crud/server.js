@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const booksRoutes = require('./routes/books'); 
 
 const mongodb = require('./data/database');
 const app = express();
@@ -17,7 +16,6 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json()); 
-app.use('/books', booksRoutes);
 
 // Routes
 app.use('/', require('./routes'));
