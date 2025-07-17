@@ -1,19 +1,22 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Bookstore API",
-    "description": "Welcome to the Bookstore",
+    "title": "Books Api",
+    "description": "Books Api",
     "version": "1.0.0"
   },
   "host": "cse341-crud-70bp.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
     "/": {
       "get": {
-        "tags": ["Hello world"],
-        "description": "Welcome to the Bookstore API",
-        "produces": ["application/json"],
+        "tags": [
+          "Hello world"
+        ],
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
@@ -21,37 +24,87 @@
         }
       }
     },
-    "/books": {
+    "/books-api": {
       "get": {
-        "summary": "Get all books",
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/books/": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
-            "description": "List of books"
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "post": {
-        "summary": "Create a new book",
-        "consumes": ["application/json"],
+        "tags": [
+          "Books"
+        ],
+        "description": "",
         "parameters": [
           {
+            "name": "body",
             "in": "body",
-            "name": "book",
-            "required": true,
             "schema": {
-              "$ref": "#/definitions/Book"
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "publishedDate": {
+                  "example": "any"
+                },
+                "summary": {
+                  "example": "any"
+                }
+              }
             }
           }
         ],
         "responses": {
-          "201": { "description": "Book created" },
-          "400": { "description": "Invalid input" }
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
     },
     "/books/{id}": {
       "get": {
-        "summary": "Get a book by ID",
+        "tags": [
+          "Books"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -61,13 +114,19 @@
           }
         ],
         "responses": {
-          "200": { "description": "Book found" },
-          "404": { "description": "Book not found" }
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "put": {
-        "summary": "Update a book",
-        "consumes": ["application/json"],
+        "tags": [
+          "Books"
+        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -76,21 +135,47 @@
             "type": "string"
           },
           {
+            "name": "body",
             "in": "body",
-            "name": "book",
-            "required": true,
             "schema": {
-              "$ref": "#/definitions/Book"
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "publishedDate": {
+                  "example": "any"
+                },
+                "summary": {
+                  "example": "any"
+                }
+              }
             }
           }
         ],
         "responses": {
-          "200": { "description": "Book updated" },
-          "400": { "description": "Invalid input" }
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "delete": {
-        "summary": "Delete a book",
+        "tags": [
+          "Books"
+        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -100,31 +185,57 @@
           }
         ],
         "responses": {
-          "204": { "description": "Book deleted" },
-          "404": { "description": "Book not found" }
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
-    }
-  },
-  "definitions": {
-    "Book": {
-      "type": "object",
-      "required": ["title", "author"],
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "author": {
-          "type": "string"
-        },
-        "genre": {
-          "type": "string"
-        },
-        "publishedDate": {
-          "type": "integer"
-        },
-        "summary": {
-          "type": "string"
+    },
+    "/books/books": {
+      "post": {
+        "tags": [
+          "Books"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "publishedDate": {
+                  "example": "any"
+                },
+                "summary": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
     }
