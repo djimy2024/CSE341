@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Books Api and Author Api",
-    "description": "Books Api and Author Api",
+    "title": "Authors Api",
+    "description": "Authors Api",
     "version": "1.0.0"
   },
   "host": "cse341-crud-70bp.onrender.com",
@@ -25,6 +25,16 @@
       }
     },
     "/books-api": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/authors-api": {
       "get": {
         "description": "",
         "responses": {
@@ -194,146 +204,152 @@
         }
       }
     },
-    "/authors": {
+    "/authors/": {
       "get": {
-          "tags": ["Authors"],
-        "summary": "Get all authors",
+        "tags": [
+          "Authors"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
-            "description": "List of all authors"
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "post": {
-         "tags": ["Authors"],
-        "summary": "Create a new author",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Author"
+        "tags": [
+          "Authors"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "bio": {
+                  "example": "any"
+                },
+                "birthdate": {
+                  "example": "any"
+                }
               }
             }
           }
-        },
+        ],
         "responses": {
-          "201": {
-            "description": "Author created successfully"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
     },
     "/authors/{id}": {
       "get": {
-         "tags": ["Authors"],
-        "summary": "Get an author by ID",
+        "tags": [
+          "Authors"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "Author found"
+            "description": "OK"
           },
-          "404": {
-            "description": "Author not found"
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "put": {
-         "tags": ["Authors"],
-        "summary": "Update an author by ID",
+        "tags": [
+          "Authors"
+        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
             "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Author"
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "bio": {
+                  "example": "any"
+                },
+                "birthdate": {
+                  "example": "any"
+                }
               }
             }
           }
-        },
+        ],
         "responses": {
-          "200": {
-            "description": "Author updated"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "delete": {
-         "tags": ["Authors"],
-        "summary": "Delete an author by ID",
+        "tags": [
+          "Authors"
+        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
-          "200": {
-            "description": "Author deleted"
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "Book": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "author": {
-            "type": "string"
-          },
-          "genre": {
-            "type": "string"
-          },
-          "publishedDate": {
-            "type": "integer"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": ["title", "author", "genre"]
-      },
-      "Author": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "bio": {
-            "type": "string"
-          },
-          "birthdate": {
-            "type": "string"
-          }
-        },
-        "required": ["name"]
       }
     }
   }
