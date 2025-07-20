@@ -5,6 +5,12 @@ const doc = {
         title: 'Books Api',
         description: 'Books Api'
     },
+
+    info: {
+        title: 'Authors Api',
+        description: 'Authors Api'
+    },
+
     host: 'cse341-crud-70bp.onrender.com',
     schemes:['https']
 };

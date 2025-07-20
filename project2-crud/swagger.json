@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Books Api",
-    "description": "Books Api",
+    "title": "Books Api and Author Api",
+    "description": "Books Api and Author Api",
     "version": "1.0.0"
   },
   "host": "cse341-crud-70bp.onrender.com",
@@ -192,6 +192,148 @@
             "description": "Internal Server Error"
           }
         }
+      }
+    },
+    "/authors": {
+      "get": {
+          "tags": ["Authors"],
+        "summary": "Get all authors",
+        "responses": {
+          "200": {
+            "description": "List of all authors"
+          }
+        }
+      },
+      "post": {
+         "tags": ["Authors"],
+        "summary": "Create a new author",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Author"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Author created successfully"
+          }
+        }
+      }
+    },
+    "/authors/{id}": {
+      "get": {
+         "tags": ["Authors"],
+        "summary": "Get an author by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Author found"
+          },
+          "404": {
+            "description": "Author not found"
+          }
+        }
+      },
+      "put": {
+         "tags": ["Authors"],
+        "summary": "Update an author by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Author"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Author updated"
+          }
+        }
+      },
+      "delete": {
+         "tags": ["Authors"],
+        "summary": "Delete an author by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Author deleted"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Book": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "publishedDate": {
+            "type": "integer"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": ["title", "author", "genre"]
+      },
+      "Author": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "bio": {
+            "type": "string"
+          },
+          "birthdate": {
+            "type": "string"
+          }
+        },
+        "required": ["name"]
       }
     }
   }
