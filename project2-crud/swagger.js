@@ -11,7 +11,7 @@ const doc = {
         description: 'Authors Api'
     },
 
-    host: 'cse341-crud-70bp.onrender.com',
+    host: 'cse341-1-egbp.onrender.com',
     schemes:['https']
 };
 

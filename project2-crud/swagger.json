@@ -5,7 +5,7 @@
     "description": "Authors Api",
     "version": "1.0.0"
   },
-  "host": "cse341-crud-70bp.onrender.com",
+  "host": "cse341-1-egbp.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
