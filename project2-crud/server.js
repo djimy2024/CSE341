@@ -1,4 +1,8 @@
+
 const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
+console.log('GITHUB_CLIENT_ID:', process.env.GITHUB_CLIENT_ID);
+console.log('GITHUB_CLIENT_SECRET:', process.env.GITHUB_CLIENT_SECRET);
+console.log('GITHUB_CALLBACK_URL:', process.env.GITHUB_CALLBACK_URL);
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
