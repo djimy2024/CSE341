@@ -5,10 +5,10 @@
     "description": "Authors Api",
     "version": "1.0.0"
   },
-  "host": "cse341-crud-70bp.onrender.com",
+  "host": "localhost:3001",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/": {
