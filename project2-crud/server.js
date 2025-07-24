@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
@@ -5,7 +6,7 @@ const GitHubStrategy = require('passport-github2').Strategy;
 const cors = require('cors');
 
 const mongodb = require('./data/database');
-const { passport } = require('passport');
+const passport = require('passport');
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -34,7 +35,7 @@ app.use(cors({origin: '*'}))
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL
+    callbackURL: process.env.GITHUB_CALLBACK_URL
 },
 function(accessToken, refreshToken, profile, done) {
     //User.findOrCreate({githubId: profile.id},function(err, user){

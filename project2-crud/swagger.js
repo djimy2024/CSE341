@@ -11,8 +11,8 @@ const doc = {
         description: 'Authors Api'
     },
 
-    host: 'localhost:3001',
-    schemes:['http']
+    host: 'cse341-crud-70bp.onrender.com',
+    schemes:['https']
 };
 
 const outputFile = './swagger.json';
