@@ -9,6 +9,7 @@ const genresController = require('../controllers/genres');
 
 // Import the `body` function from express-validator 
 const { body } = require('express-validator');
+const {isAuthenticate} = require('../middleware/authenticate');
 
 // Define a GET route at '/' to get all genres
 // When this route is hit, it calls genresController.getAll
@@ -18,13 +19,13 @@ router.get('/', genresController.getAll);
 router.get('/:id', genresController.getSingle);
 
 // Define a POST route at '/' to create a new genre
-router.post('/', genresController.createGenre);
+router.post('/', isAuthenticate, genresController.createGenre);
 
 // Define a PUT route at '/:id' to update a specific genre by its ID
-router.put('/:id', genresController.updateGenre);
+router.put('/:id', isAuthenticate, genresController.updateGenre);
 
 // Define a DELETE route at '/:id' to delete a specific genre by its ID
-router.delete('/:id', genresController.deleteGenre);
+router.delete('/:id', isAuthenticate, genresController.deleteGenre);
 
-// Export the router so it can be used in your main server file
+// Export the router so it can be used in my main server file
 module.exports = router;

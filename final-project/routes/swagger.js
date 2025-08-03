@@ -8,11 +8,11 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../swagger.json');
 
 // Serve Swagger UI static assets on the '/docs-api' route
-router.use('/docs-api', swaggerUi.serve);
+router.use('/api-docs', swaggerUi.serve);
 
 // When a GET request hits '/docs-api', display the Swagger UI page
 // The Swagger UI is configured with the Swagger JSON document
-router.get('/docs-api', swaggerUi.setup(swaggerDocument));
+router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 // Export this router so it can be mounted in the main Express app
 module.exports = router;

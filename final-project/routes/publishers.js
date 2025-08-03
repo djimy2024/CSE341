@@ -9,6 +9,7 @@ const publishersController = require('../controllers/publishers');
 
 // Import the `body` function from express-validator 
 const { body } = require('express-validator');
+const {isAuthenticate} = require('../middleware/authenticate');
 
 // Define a GET route for '/'
 // This will retrieve and return all publisher records
@@ -20,15 +21,15 @@ router.get('/:id', publishersController.getSingle);
 
 // Define a POST route for '/'
 // This will create a new publisher using data sent in the request body
-router.post('/', publishersController.createPublisher);
+router.post('/', isAuthenticate, publishersController.createPublisher);
 
 // Define a PUT route for '/:id'
 // This will update an existing publisher identified by its ID
-router.put('/:id', publishersController.updatePublisher);
+router.put('/:id', isAuthenticate, publishersController.updatePublisher);
 
 // Define a DELETE route for '/:id'
 // This will delete a publisher identified by its ID
-router.delete('/:id', publishersController.deletePublisher);
+router.delete('/:id', isAuthenticate, publishersController.deletePublisher);
 
 // Export the router so it can be used in the main application file
 module.exports = router;
