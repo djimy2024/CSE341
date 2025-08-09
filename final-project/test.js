@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 
-// Mock routes with example data (same jan nou te fè avan)
+
 app.get('/books', (req, res) => {
   res.json([
     {
