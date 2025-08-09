@@ -116,13 +116,16 @@ app.use('/', require('./routes'));
 // Start the Express server and listen on the defined port
 app.listen(port);
 
-// Initialize MongoDB connection before confirming the server is ready
-mongodb.initDb((err) => {
-    if (err) {
-        // If there's an error connecting to MongoDB, log it
-        console.log(err);
-    } else {
-        // If the DB connection is successful, log the server is running
-        console.log('web server is listening at port ' + port);
-    }
-});
+if (process.env.NODE_ENV !== 'test') {
+    mongodb.initDb((err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            app.listen(port, () => {
+                console.log('web server is listening at port ' + port);
+            });
+        }
+    });
+}
+
+module.exports = app;
