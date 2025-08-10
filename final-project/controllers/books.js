@@ -46,7 +46,9 @@ const createBook = async (req, res) => {
       author: req.body.author,
       genre: req.body.genre,
       publishedDate: req.body.publishedDate,
-      summary: req.body.summary
+      publisher: req.body.publisher,
+      pages: req.body.pages,
+      language: req.body.language
     };
 
     // Insert the book into the collection
@@ -76,7 +78,9 @@ const updateBook = async (req, res) => {
       author: req.body.author,
       genre: req.body.genre,
       publishedDate: req.body.publishedDate,
-      summary: req.body.summary
+      publisher: req.body.publisher,
+      pages: req.body.pages,
+      language: req.body.language
     };
 
     // Replace the existing document with the new one

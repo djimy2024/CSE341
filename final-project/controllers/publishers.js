@@ -43,7 +43,11 @@ const createPublisher = async (req, res) => {
     const publisher = {
       name: req.body.name,
       location: req.body.location,
-      founded: req.body.founded
+      founded: req.body.founded,
+      founders:req.body.founders,
+      genresPublished:req.body.genresPublished,
+      website:req.body.website,
+      bestsellers:req.body.bestsellers
     };
 
     // Insert into MongoDB
@@ -71,7 +75,11 @@ const updatePublisher = async (req, res) => {
     const publisher = {
       name: req.body.name,
       location: req.body.location,
-      founded: req.body.founded
+      founded: req.body.founded,
+      founders: req.body.founders,
+      genresPublished: req.body.genresPublished,
+      website: req.body.website,
+      bestsellers: req.body.bestsellers
     };
 
     // Replace the existing document with the new data

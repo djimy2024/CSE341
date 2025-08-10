@@ -46,7 +46,12 @@ const createGenre = async (req, res) => {
     // Build the genre object
     const genre = {
       name: req.body.name,
-      description: req.body.description
+      description: req.body.description,
+      popularAuthors: req.body.popularAuthors,
+      exampleBooks: req.body.exampleBooks,
+      origin: req.body.origin,
+      subgenres: req.body.subgenres,
+      themes: req.body.themes
     };
 
     // Insert into the database
@@ -73,7 +78,12 @@ const updateGenre = async (req, res) => {
     const genreId = new ObjectId(req.params.id); // Convert URL param to ObjectId
     const genre = {
       name: req.body.name,
-      description: req.body.description
+      description: req.body.description,
+      popularAuthors: req.body.popularAuthors,
+      exampleBooks: req.body.exampleBooks,
+      origin: req.body.origin,
+      subgenres: req.body.subgenres,
+      themes: req.body.themes
     };
 
     // Replace the existing document with new one
