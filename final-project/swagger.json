@@ -99,6 +99,21 @@
                 },
                 "description": {
                   "example": "any"
+                },
+                "popularAuthors": {
+                  "example": "any"
+                },
+                "exampleBooks": {
+                  "example": "any"
+                },
+                "origin": {
+                  "example": "any"
+                },
+                "subgenres": {
+                  "example": "any"
+                },
+                "themes": {
+                  "example": "any"
                 }
               }
             }
@@ -165,6 +180,21 @@
                   "example": "any"
                 },
                 "description": {
+                  "example": "any"
+                },
+                "popularAuthors": {
+                  "example": "any"
+                },
+                "exampleBooks": {
+                  "example": "any"
+                },
+                "origin": {
+                  "example": "any"
+                },
+                "subgenres": {
+                  "example": "any"
+                },
+                "themes": {
                   "example": "any"
                 }
               }
@@ -244,6 +274,18 @@
                 },
                 "birthDate": {
                   "example": "any"
+                },
+                "deathDate": {
+                  "example": "any"
+                },
+                "nationality": {
+                  "example": "any"
+                },
+                "notableWorks": {
+                  "example": "any"
+                },
+                "awards": {
+                  "example": "any"
                 }
               }
             }
@@ -313,6 +355,18 @@
                   "example": "any"
                 },
                 "birthDate": {
+                  "example": "any"
+                },
+                "deathDate": {
+                  "example": "any"
+                },
+                "nationality": {
+                  "example": "any"
+                },
+                "notableWorks": {
+                  "example": "any"
+                },
+                "awards": {
                   "example": "any"
                 }
               }
@@ -397,7 +451,13 @@
                 "publishedDate": {
                   "example": "any"
                 },
-                "summary": {
+                "publisher": {
+                  "example": "any"
+                },
+                "pages": {
+                  "example": "any"
+                },
+                "language": {
                   "example": "any"
                 }
               }
@@ -473,7 +533,13 @@
                 "publishedDate": {
                   "example": "any"
                 },
-                "summary": {
+                "publisher": {
+                  "example": "any"
+                },
+                "pages": {
+                  "example": "any"
+                },
+                "language": {
                   "example": "any"
                 }
               }
@@ -553,6 +619,18 @@
                 },
                 "founded": {
                   "example": "any"
+                },
+                "founders": {
+                  "example": "any"
+                },
+                "genresPublished": {
+                  "example": "any"
+                },
+                "website": {
+                  "example": "any"
+                },
+                "bestsellers": {
+                  "example": "any"
                 }
               }
             }
@@ -622,6 +700,18 @@
                   "example": "any"
                 },
                 "founded": {
+                  "example": "any"
+                },
+                "founders": {
+                  "example": "any"
+                },
+                "genresPublished": {
+                  "example": "any"
+                },
+                "website": {
+                  "example": "any"
+                },
+                "bestsellers": {
                   "example": "any"
                 }
               }
