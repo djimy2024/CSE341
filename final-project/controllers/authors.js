@@ -51,10 +51,10 @@ const createAuthor = async (req, res) => {
       name: req.body.name,
       bio: req.body.bio,
       birthdate: req.body.birthdate,
-      deathDate: req.body.birthdate,
-      nationality: req.body.birthdate,
-      notableWorks: req.body.birthdate,
-      awards: req.body.birthdate
+      deathDate: req.body.deathDate,
+      nationality: req.body.nationality,
+      notableWorks: req.body.notableWorks,
+      awards: req.body.awards
     };
 
     // Insert the new author into the database
@@ -83,10 +83,10 @@ const updateAuthor = async (req, res) => {
       name: req.body.name,
       bio: req.body.bio,
       birthdate: req.body.birthdate,
-      deathDate: req.body.birthdate,
-      nationality: req.body.birthdate,
-      notableWorks: req.body.birthdate,
-      awards: req.body.birthdate
+      deathDate: req.body.deathDate,
+      nationality: req.body.nationality,
+      notableWorks: req.body.notableWorks,
+      awards: req.body.awards
     };
 
     // Replace the existing author document

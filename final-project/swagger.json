@@ -107,7 +107,9 @@
                   "example": "any"
                 },
                 "origin": {
-                  "example": "any"
+                 "type": "string",
+                  "format": "date",
+                  "example": "1800s ou 19th century"
                 },
                 "subgenres": {
                   "example": "any"
@@ -189,7 +191,9 @@
                   "example": "any"
                 },
                 "origin": {
-                  "example": "any"
+                  "type": "string",
+                  "format": "date",
+                  "example": "1800s ou 19th century"
                 },
                 "subgenres": {
                   "example": "any"
@@ -273,10 +277,14 @@
                   "example": "any"
                 },
                 "birthDate": {
-                  "example": "any"
+                  "type": "string",
+                  "format": "date",
+                  "example": "1967-05-05"
                 },
                 "deathDate": {
-                  "example": "any"
+                  "type": "string",
+                  "format": "date",
+                  "example": "2008-02-03"
                 },
                 "nationality": {
                   "example": "any"
@@ -355,10 +363,14 @@
                   "example": "any"
                 },
                 "birthDate": {
-                  "example": "any"
+                  "type": "string",
+                  "format": "date",
+                  "example": "1967-05-05"
                 },
                 "deathDate": {
-                  "example": "any"
+                 "type": "string",
+                 "format": "date",
+                 "example": "2008-02-03"
                 },
                 "nationality": {
                   "example": "any"
@@ -449,7 +461,9 @@
                   "example": "any"
                 },
                 "publishedDate": {
-                  "example": "any"
+                 "type": "string",
+                  "format": "date",
+                  "example": "1800"
                 },
                 "publisher": {
                   "example": "any"
@@ -531,7 +545,9 @@
                   "example": "any"
                 },
                 "publishedDate": {
-                  "example": "any"
+                 "type": "string",
+                  "format": "date",
+                  "example": "1800"
                 },
                 "publisher": {
                   "example": "any"
@@ -618,7 +634,9 @@
                   "example": "any"
                 },
                 "founded": {
-                  "example": "any"
+                 "type": "string",
+                  "format": "date",
+                  "example": "1800"
                 },
                 "founders": {
                   "example": "any"
@@ -700,7 +718,9 @@
                   "example": "any"
                 },
                 "founded": {
-                  "example": "any"
+                  "type": "string",
+                  "format": "date",
+                  "example": "1800"
                 },
                 "founders": {
                   "example": "any"
